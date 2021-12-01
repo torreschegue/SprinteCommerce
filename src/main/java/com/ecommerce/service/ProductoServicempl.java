@@ -1,5 +1,6 @@
 package com.ecommerce.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,12 @@ public class ProductoServicempl implements ProductoService{
 	@Override
 	public void delete(Integer Id) {
 		 productorRepository.deleteById(Id);
+	}
+
+	@Override
+	public List<Producto> findAll() {
+		
+		return productorRepository.findAll();
 	}
 
 }
